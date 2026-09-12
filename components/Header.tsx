@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-
+  const menuContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -32,6 +32,24 @@ export default function Header() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+
+      if (!menuContainerRef.current?.contains(target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     if (pathname === "/careers") {
@@ -95,7 +113,10 @@ export default function Header() {
   ];
 
   return (
-    <div className="px-4 container mx-auto max-w-6xl pointer-events-auto">
+  <div
+    ref={menuContainerRef}
+    className="px-4 container mx-auto max-w-6xl pointer-events-auto"
+  >
       <div
         className={`rounded-full transition-all duration-300 backdrop-blur-xl border px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl ${
           scrolled
