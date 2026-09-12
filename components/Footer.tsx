@@ -120,7 +120,7 @@ export default function Footer() {
             </h4>
 
             {/* Social Icons (GitHub, Discord, LinkedIn, Instagram) */}
-            <div className="flex items-center justify-center sm:justify-start gap-3 mb-6">
+            <div className="flex items-center justify-start gap-3 mb-6">
               {socialLinks.map((soc) => (
                 <motion.a
                   key={soc.name}
