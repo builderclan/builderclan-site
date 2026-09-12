@@ -17,6 +17,7 @@ export default function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,6 +28,7 @@ export default function Header() {
         setIsOpen(false);
       }
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -36,32 +38,51 @@ export default function Header() {
       setActiveLink("careers");
       return;
     }
+
     if (pathname === "/campus") {
       setActiveLink("campus");
       return;
     }
+
     if (pathname !== "/") {
       setActiveLink("");
       return;
     }
 
-    const sections = document.querySelectorAll("section");
-    const options = {
-      root: null,
-      rootMargin: "-20% 0px -40% 0px",
-      threshold: 0.2,
-    };
+    const sectionIds = ["home", "about", "opportunity", "faq"];
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.target.id) {
-          setActiveLink(entry.target.id);
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + 120;
+      let currentSection = "home";
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+
+        if (!section) return;
+
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY;
+
+        if (sectionTop <= scrollPosition) {
+          currentSection = id;
         }
       });
-    }, options);
 
-    sections.forEach((section) => observer.observe(section));
-    return () => sections.forEach((section) => observer.unobserve(section));
+      setActiveLink(currentSection);
+    };
+
+    updateActiveSection();
+
+    window.addEventListener("scroll", updateActiveSection, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, [pathname]);
 
   const navLinks = [
@@ -98,6 +119,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-1 bg-[#141414]/70 p-1.5 rounded-full border border-[#262626]">
           {navLinks.map((link) => {
             const isActive = activeLink === link.id;
+
             return (
               <Link
                 key={link.name}
@@ -131,7 +153,11 @@ export default function Header() {
           className="lg:hidden p-2 rounded-full bg-[#222222] border border-[#262626] text-[#caff33] hover:bg-[#282828] transition-colors"
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {isOpen ? (
+            <X className="w-5 h-5" />
+          ) : (
+            <Menu className="w-5 h-5" />
+          )}
         </button>
       </div>
 
@@ -148,6 +174,7 @@ export default function Header() {
             <div className="rounded-2xl bg-[#1c1c1c]/95 border border-[#262626] backdrop-blur-2xl p-5 shadow-2xl flex flex-col gap-2">
               {navLinks.map((link) => {
                 const isActive = activeLink === link.id;
+
                 return (
                   <Link
                     key={link.name}
