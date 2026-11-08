@@ -2,7 +2,7 @@
 
 import { MoveUp } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function BackToTop() {
   const [showButton, setShowButton] = useState(false);

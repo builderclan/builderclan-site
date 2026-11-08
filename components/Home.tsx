@@ -1,10 +1,10 @@
 "use client";
 
+import { type Variants, motion } from "framer-motion";
+import { ArrowUpRight, Cpu, Rocket, Sparkles, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, type Variants } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Sparkles, Users, Cpu, Rocket } from "lucide-react";
 
 export default function HomeSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,11 +40,9 @@ export default function HomeSection() {
 
       <div className="container mx-auto px-4 h-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-center h-full">
-          
           {/* Left Text & CTA Content (7 Cols) */}
           <div className="col-span-12 lg:col-span-7 lg:mb-0 mb-12">
             <div className="flex flex-col justify-center h-full px-2">
-              
               {/* Top Pill Badge */}
               <motion.div
                 className="mb-6 flex items-center"
@@ -83,7 +81,9 @@ export default function HomeSection() {
                 animate={isVisible ? "visible" : "hidden"}
                 variants={heroTextVariants}
               >
-                From your first side project to your first startup, BuilderClan brings curious minds together to learn, collaborate, and build meaningful technology.
+                From your first side project to your first startup, BuilderClan
+                brings curious minds together to learn, collaborate, and build
+                meaningful technology.
               </motion.p>
 
               {/* Action Buttons */}
@@ -94,7 +94,10 @@ export default function HomeSection() {
                 animate={isVisible ? "visible" : "hidden"}
                 variants={heroTextVariants}
               >
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+                <motion.div
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                >
                   <Link
                     href="#joinclan"
                     className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-semibold text-sm transition-all shadow-[0_0_15px_rgba(202,255,51,0.3)] hover:shadow-[0_0_25px_rgba(202,255,51,0.5)]"
@@ -104,7 +107,10 @@ export default function HomeSection() {
                   </Link>
                 </motion.div>
 
-                <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+                <motion.div
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                >
                   <Link
                     href="#about"
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#1c1c1c] hover:bg-[#262626] border border-[#262626] hover:border-[#383838] text-white font-medium text-sm transition-all"
@@ -113,13 +119,11 @@ export default function HomeSection() {
                   </Link>
                 </motion.div>
               </motion.div>
-
             </div>
           </div>
 
           {/* Right Visual Section (5 Cols): Floating Feature Cards */}
           <div className="col-span-12 lg:col-span-5 flex justify-center items-center relative min-h-[400px] sm:min-h-[440px] py-8 my-4">
-            
             {/* Ambient Glow */}
             <div className="absolute w-72 h-72 rounded-full bg-gradient-to-r from-[#caff33]/20 via-[#a5cc29]/10 to-transparent blur-3xl opacity-70 pointer-events-none" />
 
@@ -150,7 +154,11 @@ export default function HomeSection() {
               }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.4 },
-                y: { duration: 5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                y: {
+                  duration: 5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{ scale: 1.05 }}
             >
@@ -158,8 +166,12 @@ export default function HomeSection() {
                 <Users className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#caff33]" />
               </div>
               <div className="text-left">
-                <div className="text-[10px] sm:text-xs font-bold text-white">Students • Professionals • Builders</div>
-                <div className="text-[9px] sm:text-[11px] text-[#a1a1aa]">Teachers & Researchers Welcome</div>
+                <div className="text-[10px] sm:text-xs font-bold text-white">
+                  Students • Professionals • Builders
+                </div>
+                <div className="text-[9px] sm:text-[11px] text-[#a1a1aa]">
+                  Teachers & Researchers Welcome
+                </div>
               </div>
             </motion.div>
 
@@ -173,7 +185,12 @@ export default function HomeSection() {
               }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.6 },
-                y: { duration: 5.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 },
+                y: {
+                  duration: 5.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                },
               }}
               whileHover={{ scale: 1.05 }}
             >
@@ -181,8 +198,12 @@ export default function HomeSection() {
                 <Rocket className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#caff33]" />
               </div>
               <div className="text-left">
-                <div className="text-[10px] sm:text-xs font-bold text-white">Side Projects → Startups</div>
-                <div className="text-[9px] sm:text-[11px] text-[#a1a1aa]">From Curiosity to Companies</div>
+                <div className="text-[10px] sm:text-xs font-bold text-white">
+                  Side Projects → Startups
+                </div>
+                <div className="text-[9px] sm:text-[11px] text-[#a1a1aa]">
+                  From Curiosity to Companies
+                </div>
               </div>
             </motion.div>
 
@@ -196,15 +217,20 @@ export default function HomeSection() {
               }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.5 },
-                x: { duration: 4.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.2 },
+                x: {
+                  duration: 4.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 0.2,
+                },
               }}
             >
               <Cpu className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#caff33] shrink-0" />
-              <span className="text-[10px] sm:text-xs font-medium text-[#d4d4d8]">Hardware • Software • AI</span>
+              <span className="text-[10px] sm:text-xs font-medium text-[#d4d4d8]">
+                Hardware • Software • AI
+              </span>
             </motion.div>
-
           </div>
-
         </div>
       </div>
     </section>
