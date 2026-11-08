@@ -1,6 +1,6 @@
-import BackToTop from "@components/BackToTop";
-import Footer from "@components/Footer";
-import Header from "@components/Header";
+import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import {
   ArrowUpRight,
   Briefcase,
