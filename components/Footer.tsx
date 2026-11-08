@@ -64,7 +64,7 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col items-start gap-5">
             <Link href="/#home" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33] rounded-xl" aria-label="BuilderClan Home">
               <div className="p-2 rounded-xl bg-[#1c1c1c] border border-[#262626] group-hover:border-[#caff33]/50 transition-colors duration-250">
-                <Image src="/LogoShort.png" alt="BuilderClan Logo" width={206} height={161} className="w-8 h-auto" />
+                <Image src="/LogoShort.png" alt="BuilderClan Logo" width={450} height={266} className="w-8 h-auto" />
               </div>
               <span className="text-xl font-bold text-white tracking-tight group-hover:text-[#caff33] transition-colors duration-250">
                 BuilderClan
