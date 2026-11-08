@@ -1,52 +1,82 @@
-## 📌 Description
+<!--
+  Thank you for contributing to BuilderClan!
+  Please ensure your pull request targets the 'dev' branch (not 'main').
+-->
 
-Please include a summary of the changes and the related issue (if any).
+## Problem
 
-Fixes #(issue)
+<!-- Describe the problem, bug, or motivation for this change. Why is this necessary? -->
 
----
-
-## ✅ Type of change
-
-Select all that apply:
-
-- [ ] 🐞 Bug fix (non-breaking change)
-- [ ] 🚀 New feature (non-breaking change)
-- [ ] 💥 Breaking change
-- [ ] 📖 Documentation update
-- [ ] 🧪 Tests added/updated
-- [ ] 🔧 Refactor / Code cleanup
+Fixes # <!-- Issue number (e.g. Closes #123, Resolves #456, or leave blank if none) -->
 
 ---
 
-# How Has This Been Tested?
+## Solution
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
-
-- [ ] Test A
-- [ ] Test B
+<!-- Describe the technical approach, architecture, or design choices made to solve the problem. -->
 
 ---
 
-# Checklist
+## Impact on the Application
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my code
-- [ ] I have made corresponding changes to the documentation (if needed)
-- [ ] My changes generate no new warnings
-- [ ] I have run `npm run lint` / project checks
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+<!-- Describe how this change affects the application. -->
+- **Visual & UX Changes**: <!-- Details on layout, typography, or interaction changes -->
+- **Affected Routes & Components**: <!-- e.g. /, /campus, /careers, RegistrationForm -->
+- **Performance & Bundle**: <!-- Any package additions, pruned assets, or performance considerations -->
+- **Breaking Changes**: [ ] No / [ ] Yes (explain below)
 
 ---
 
-## 📷 Screenshots (if UI changes)
+## Type of Change
 
-Add before/after screenshots if relevant.
+- [ ] Bug fix (non-breaking change that fixes an issue)
+- [ ] New feature (non-breaking change that adds functionality)
+- [ ] UI / Styling (visual hierarchy, design system tokens, typography)
+- [ ] Refactor (code cleanup, dead code pruning, structure improvement)
+- [ ] Documentation (README, contribution guides, comments)
+- [ ] Chore / Tooling (dependencies, build scripts, configuration)
+- [ ] Breaking change (causes existing functionality to break or requires migration)
 
 ---
 
-## 💬 Additional context
+## Verification & Quality Checks
 
-Add any other context about the PR here.
+### Automated Checks
+
+- [ ] `npm run check` (Biome format and lint passes with 0 errors)
+- [ ] `npm run lint` (ESLint passes with 0 errors)
+- [ ] `npx tsc --noEmit` (TypeScript type check passes with 0 errors)
+- [ ] `npm run build` (Next.js production build succeeds locally)
+- [ ] Diff self-review completed (no debug logs, secrets, or unintentional changes)
+
+### Manual Reproduction & Test Steps
+<!-- Describe the exact steps taken to verify these changes locally. -->
+1. Run `npm run dev`
+2. Navigate to `...`
+3. Verify that `...`
+
+---
+
+## Visual Verification (If Applicable)
+
+| Viewport | Status / Notes |
+| :--- | :--- |
+| Mobile (< 640px) | [ ] Verified responsive layout |
+| Tablet (640px - 1024px) | [ ] Verified container gutters and scaling |
+| Desktop (> 1024px) | [ ] Verified layout, typography, and hover states |
+| Dark Mode | [ ] Verified contrast against #141414 / #caff33 |
+
+<details>
+<summary><b>Before & After Screenshots</b> (click to expand)</summary>
+
+| Before | After |
+| :---: | :---: |
+| *Add before screenshot or N/A* | *Add after screenshot* |
+
+</details>
+
+---
+
+## Additional Context
+
+<!-- Add any additional notes, deployment considerations, or questions for reviewers. -->
