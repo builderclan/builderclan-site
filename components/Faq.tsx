@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "What can I build at BuilderClan?",
     answer:
-      "You can build anything that helps you grow as a builder—from side projects and creative experiments to open-source software, embedded systems, AI applications, IoT devices, robotics, research projects, developer tools, products, and startups.",
+      "You can build anything that helps you grow as a builder, from side projects and creative experiments to open-source software, embedded systems, AI applications, IoT devices, robotics, research projects, developer tools, products, and startups.",
   },
   {
     question: "I'm a beginner. Can I still join?",
