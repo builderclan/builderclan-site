@@ -143,29 +143,6 @@
   margin-top: 0.25rem;
 }
 
-.select {
-  background: #141414 !important;
-  border: 1px solid #262626 !important;
-  color: #ffffff !important;
-  border-radius: 0.75rem !important;
-  padding: 0.75rem 1rem !important;
-}
-
-.selectContent {
-  background: #1c1c1c !important;
-  border: 1px solid #262626 !important;
-  border-radius: 0.75rem !important;
-}
-
-.selectItem {
-  color: #ffffff !important;
-}
-
-.selectItem:hover {
-  background: #262626 !important;
-  color: #caff33 !important;
-}
-
 .errorAlert {
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.3);
