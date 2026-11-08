@@ -36,7 +36,7 @@ export default function CTA() {
               rel="noopener noreferrer"
               whileHover={{ y: -2, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-semibold text-sm transition-all duration-250 ease-out shadow-[0_0_15px_rgba(202,255,51,0.25)] hover:shadow-[0_0_25px_rgba(202,255,51,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33]"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-semibold text-sm transition-all duration-250 ease-out shadow-[0_0_15px_rgba(202,255,51,0.3)] hover:shadow-[0_0_25px_rgba(202,255,51,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33]"
               aria-label="Join the BuilderClan Community on Discord"
             >
               <span>Join the Community</span>
@@ -49,7 +49,7 @@ export default function CTA() {
             >
               <Link
                 href="/#opportunity"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-[#222222] hover:bg-[#282828] border border-[#262626] hover:border-[#383838] text-white font-medium text-sm transition-all duration-250 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33]"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#1c1c1c] hover:bg-[#262626] border border-[#262626] hover:border-[#383838] text-white font-medium text-sm transition-all duration-250 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33]"
               >
                 <span>Explore Projects</span>
               </Link>

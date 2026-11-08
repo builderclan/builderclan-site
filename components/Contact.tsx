@@ -1,6 +1,12 @@
 "use client";
 
-import { ArrowUpRight, Briefcase, Handshake, Mail } from "lucide-react";
+import {
+  ArrowUpRight,
+  Briefcase,
+  Handshake,
+  Mail,
+  Sparkles,
+} from "lucide-react";
 import { useState } from "react";
 
 interface ContactItem {
@@ -82,6 +88,10 @@ export default function ContactSection() {
     >
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="mb-16 text-center max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1c1c1c] border border-[#262626] text-xs font-medium text-[#caff33] mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Connect with Us</span>
+          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
             Get in <span className="text-[#caff33]">Touch</span>
           </h2>
