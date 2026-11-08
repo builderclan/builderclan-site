@@ -1,8 +1,8 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { MessageCircle, Minus, Plus, Search, Sparkles } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus, Sparkles, MessageCircle, Search } from "lucide-react";
 
 const faqs = [
   {
@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "What can I build at BuilderClan?",
     answer:
-      "You can build anything that helps you grow as a builder—from side projects and creative experiments to open-source software, embedded systems, AI applications, IoT devices, robotics, research projects, developer tools, products, and startups.",
+      "You can build anything that helps you grow as a builder, from side projects and creative experiments to open-source software, embedded systems, AI applications, IoT devices, robotics, research projects, developer tools, products, and startups.",
   },
   {
     question: "I'm a beginner. Can I still join?",
@@ -35,7 +35,7 @@ const faqs = [
     answer:
       "Yes. BuilderClan is completely free to join. Our community, discussions, learning resources, project collaboration, open-source initiatives, and community events are open to everyone.",
   },
-    {
+  {
     question: "How does BuilderClan help me learn?",
     answer:
       "BuilderClan believes in learning by building. Members learn through real projects, open source, workshops, mentorship, peer collaboration, campus chapters, and hands-on experience rather than only tutorials.",
@@ -66,7 +66,7 @@ export default function FaqSection() {
   const filteredFaqs = faqs.filter(
     (faq) =>
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -93,7 +93,6 @@ export default function FaqSection() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-64 bg-gradient-to-t from-[#caff33]/6 via-transparent to-transparent pointer-events-none blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
-
         {/* Header */}
         <motion.div
           className="mb-12 text-center"
@@ -110,7 +109,8 @@ export default function FaqSection() {
             Frequently Asked <span className="text-[#caff33]">Questions</span>
           </h2>
           <p className="text-base text-[#a1a1aa] max-w-xl mx-auto leading-relaxed">
-            Everything you need to know about BuilderClan, community projects, and how to get involved.
+            Everything you need to know about BuilderClan, community projects,
+            and how to get involved.
           </p>
         </motion.div>
 
@@ -140,29 +140,37 @@ export default function FaqSection() {
                   transition={{ duration: 0.3, delay: i * 0.04 }}
                 >
                   <button
+                    type="button"
                     onClick={() => toggle(i)}
                     className="w-full py-7 flex items-start gap-6 text-left group"
                   >
                     {/* Number */}
-                    <span className={`text-sm font-mono font-bold shrink-0 mt-0.5 transition-colors duration-200 ${isOpen ? "text-[#caff33]" : "text-[#3f3f46] group-hover:text-[#52525b]"}`}>
+                    <span
+                      className={`text-sm font-mono font-bold shrink-0 mt-0.5 transition-colors duration-200 ${isOpen ? "text-[#caff33]" : "text-[#3f3f46] group-hover:text-[#52525b]"}`}
+                    >
                       {num}.
                     </span>
 
                     {/* Question */}
-                    <span className={`flex-1 text-base sm:text-lg font-semibold leading-snug transition-colors duration-200 ${isOpen ? "text-white" : "text-[#a1a1aa] group-hover:text-[#d4d4d8]"}`}>
+                    <span
+                      className={`flex-1 text-base sm:text-lg font-semibold leading-snug transition-colors duration-200 ${isOpen ? "text-white" : "text-[#a1a1aa] group-hover:text-[#d4d4d8]"}`}
+                    >
                       {faq.question}
                     </span>
 
                     {/* Icon */}
-                    <div className={`shrink-0 mt-0.5 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 ${
-                      isOpen
-                        ? "bg-[#caff33] border-[#caff33] text-[#1c1c1c]"
-                        : "border-[#333333] text-[#71717a] group-hover:border-[#444444]"
-                    }`}>
-                      {isOpen
-                        ? <Minus className="w-3.5 h-3.5" />
-                        : <Plus className="w-3.5 h-3.5" />
-                      }
+                    <div
+                      className={`shrink-0 mt-0.5 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 ${
+                        isOpen
+                          ? "bg-[#caff33] border-[#caff33] text-[#1c1c1c]"
+                          : "border-[#333333] text-[#71717a] group-hover:border-[#444444]"
+                      }`}
+                    >
+                      {isOpen ? (
+                        <Minus className="w-3.5 h-3.5" />
+                      ) : (
+                        <Plus className="w-3.5 h-3.5" />
+                      )}
                     </div>
                   </button>
 
@@ -187,8 +195,12 @@ export default function FaqSection() {
           </div>
         ) : (
           <div className="text-center py-12 bg-[#1c1c1c] border border-[#262626] rounded-2xl p-8">
-            <p className="text-white font-medium mb-1">No matching questions found</p>
-            <p className="text-sm text-[#a1a1aa]">Try searching for different keywords or contact us directly below.</p>
+            <p className="text-white font-medium mb-1">
+              No matching questions found
+            </p>
+            <p className="text-sm text-[#a1a1aa]">
+              Try searching for different keywords or contact us directly below.
+            </p>
           </div>
         )}
 
@@ -205,8 +217,13 @@ export default function FaqSection() {
               <MessageCircle className="w-5 h-5 text-[#caff33]" />
             </div>
             <div>
-              <h4 className="text-xl font-bold text-white mb-1">Still have questions?</h4>
-              <p className="text-sm text-[#a1a1aa]">Can&apos;t find what you&apos;re looking for? We&apos;d love to talk.</p>
+              <h4 className="text-xl font-bold text-white mb-1">
+                Still have questions?
+              </h4>
+              <p className="text-sm text-[#a1a1aa]">
+                Can&apos;t find what you&apos;re looking for? We&apos;d love to
+                talk.
+              </p>
             </div>
             <a
               href="mailto:main.builderclan@gmail.com"
@@ -217,7 +234,6 @@ export default function FaqSection() {
             </a>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

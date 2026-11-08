@@ -1,14 +1,14 @@
 "use client";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
-import CampusHero from "./sections/CampusHero";
-import CampusWhyStart from "./sections/CampusWhyStart";
-import CampusHowItWorks from "./sections/CampusHowItWorks";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import CampusAudience from "./sections/CampusAudience";
-import CampusDirectory from "./sections/CampusDirectory";
 import CampusCtaBanner from "./sections/CampusCtaBanner";
+import CampusDirectory from "./sections/CampusDirectory";
+import CampusHero from "./sections/CampusHero";
+import CampusHowItWorks from "./sections/CampusHowItWorks";
+import CampusWhyStart from "./sections/CampusWhyStart";
 
 export default function CampusContent() {
   return (

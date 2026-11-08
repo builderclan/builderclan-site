@@ -1,11 +1,11 @@
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import BackToTop from "@components/BackToTop";
-import HomeSection from "@components/Home";
 import AboutSection from "@components/About";
-import OpportunitySection from "@components/Opportunity";
-import FaqSection from "@components/Faq";
+import BackToTop from "@components/BackToTop";
 import CTA from "@components/CTA";
+import FaqSection from "@components/Faq";
+import Footer from "@components/Footer";
+import Header from "@components/Header";
+import HomeSection from "@components/Home";
+import OpportunitySection from "@components/Opportunity";
 
 export default function Home() {
   return (
@@ -27,4 +27,3 @@ export default function Home() {
     </>
   );
 }
-

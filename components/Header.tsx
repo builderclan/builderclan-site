@@ -1,11 +1,11 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, ArrowUpRight } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
@@ -73,18 +73,17 @@ export default function Header() {
       const scrollPosition = window.scrollY + 120;
       let currentSection = "home";
 
-      sectionIds.forEach((id) => {
+      for (const id of sectionIds) {
         const section = document.getElementById(id);
 
-        if (!section) return;
+        if (!section) continue;
 
-        const sectionTop =
-          section.getBoundingClientRect().top + window.scrollY;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
 
         if (sectionTop <= scrollPosition) {
           currentSection = id;
         }
-      });
+      }
 
       setActiveLink(currentSection);
     };
@@ -113,10 +112,10 @@ export default function Header() {
   ];
 
   return (
-  <div
-    ref={menuContainerRef}
-    className="px-4 container mx-auto max-w-6xl pointer-events-auto"
-  >
+    <div
+      ref={menuContainerRef}
+      className="px-4 container mx-auto max-w-6xl pointer-events-auto"
+    >
       <div
         className={`rounded-full transition-all duration-300 backdrop-blur-xl border px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl ${
           scrolled
@@ -129,8 +128,8 @@ export default function Header() {
           <Image
             src="/LogoShort.png"
             alt="BuilderClan Logo"
-            width={206}
-            height={161}
+            width={450}
+            height={266}
             priority
             className="w-8 h-auto transition-transform group-hover:scale-105"
           />
@@ -170,15 +169,12 @@ export default function Header() {
 
         {/* Mobile Hamburger Toggle Button */}
         <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden p-2 rounded-full bg-[#222222] border border-[#262626] text-[#caff33] hover:bg-[#282828] transition-colors"
           aria-label="Toggle menu"
         >
-          {isOpen ? (
-            <X className="w-5 h-5" />
-          ) : (
-            <Menu className="w-5 h-5" />
-          )}
+          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 

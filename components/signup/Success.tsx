@@ -1,11 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { CheckCircle2, ArrowUpRight, Sparkles } from "lucide-react";
 import styles from "@/app/signup/signup.module.css";
+import { motion } from "framer-motion";
+import { ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
 
 const DISCORD_APP_URL = process.env.NEXT_PUBLIC_DISCORD_APP_URL;
-const DISCORD_WEB_URL = process.env.NEXT_PUBLIC_DISCORD_WEB_URL || "https://discord.gg/GFnBvjc5tj";
+const DISCORD_WEB_URL =
+  process.env.NEXT_PUBLIC_DISCORD_WEB_URL || "https://discord.gg/GFnBvjc5tj";
 
 export default function Success() {
   const openDiscord = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -39,7 +40,8 @@ export default function Success() {
       <h2 className={styles.successTitle}>Registration Successful!</h2>
 
       <p className="text-sm text-[#a1a1aa] max-w-sm leading-relaxed">
-        Your BuilderClan account has been created. Join our Discord community to connect with 500+ builders worldwide.
+        Your BuilderClan account has been created. Join our Discord community to
+        connect with 500+ builders worldwide.
       </p>
 
       <div className={styles.buttonGroup}>

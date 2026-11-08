@@ -20,7 +20,11 @@
   width: 24rem;
   height: 24rem;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(202, 255, 51, 0.12) 0%, rgba(202, 255, 51, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(202, 255, 51, 0.12) 0%,
+    rgba(202, 255, 51, 0) 70%
+  );
   filter: blur(48px);
   pointer-events: none;
 }
@@ -55,7 +59,11 @@
 .gradientOverlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(202, 255, 51, 0.05), transparent 60%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(202, 255, 51, 0.05),
+    transparent 60%
+  );
   border-radius: 1.5rem;
   pointer-events: none;
 }

@@ -1,5 +1,5 @@
-import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const siteUrl = "https://builderclan.org";
@@ -16,7 +16,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "BuilderClan | Community for Pros, Students, Researchers & Beginners",
+    default:
+      "BuilderClan | Community for Pros, Students, Researchers & Beginners",
     template: "%s | BuilderClan",
   },
   description: siteDescription,
@@ -55,7 +56,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName,
-    title: "BuilderClan | Community for Pros, Students, Researchers & Beginners",
+    title:
+      "BuilderClan | Community for Pros, Students, Researchers & Beginners",
     description: siteDescription,
     images: [
       {
@@ -68,7 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BuilderClan | Community for Pros, Students, Researchers & Beginners",
+    title:
+      "BuilderClan | Community for Pros, Students, Researchers & Beginners",
     description: siteDescription,
     images: ["/og-image.png"],
     creator: "@builderclan",
@@ -127,16 +130,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-[#141414] dark" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="bg-[#141414] dark"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <meta name="theme-color" content="#141414" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta name="msapplication-navbutton-color" content="#141414" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
         />
         <script
           type="application/ld+json"
@@ -150,4 +163,3 @@ export default function RootLayout({
     </html>
   );
 }
-

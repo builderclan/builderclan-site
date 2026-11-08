@@ -16,11 +16,14 @@ export default function CampusCtaBanner() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#caff33]/10 rounded-full blur-3xl pointer-events-none" />
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">
-            Ready to Bring BuilderClan on Campus (BCC) to <span className="text-[#caff33]">Your University?</span>
+            Ready to Bring BuilderClan on Campus (BCC) to{" "}
+            <span className="text-[#caff33]">Your University?</span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#a1a1aa] max-w-xl mx-auto leading-relaxed mb-8">
-            Build a thriving campus ecosystem where engineering students, educators, and researchers collaborate on hardware, software, AI, IoT, robotics, and open source to launch real products and startups.
+            Build a thriving campus ecosystem where engineering students,
+            educators, and researchers collaborate on hardware, software, AI,
+            IoT, robotics, and open source to launch real products and startups.
           </p>
 
           <motion.a

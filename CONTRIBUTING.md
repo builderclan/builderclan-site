@@ -1,7 +1,7 @@
 # Contributing to BuilderClan Site
 
 🎉 Thanks for considering contributing to **BuilderClan Site**!
-We're building this project together as a community, and every contribution matters — from fixing a typo to implementing a full new feature.
+We're building this project together as a community, and every contribution matters - from fixing a typo to implementing a full new feature.
 
 This document will guide you through the process.
 
@@ -96,7 +96,7 @@ type(scope): short description
 ```
 
 | Type | When to use |
-|---|---|
+| --- | --- |
 | `feat` | Adding a new feature |
 | `fix` | Fixing a bug |
 | `docs` | Documentation changes only |
@@ -118,7 +118,7 @@ Examples:
 When opening a PR:
 
 - Target the **`dev`** branch (not `main`).
-- Keep changes focused — one feature or fix per PR.
+- Keep changes focused - one feature or fix per PR.
 - Describe **what** you changed and **why**.
 - Include screenshots for any UI changes.
 - Run `npm run build` locally and confirm it passes before submitting.
@@ -175,9 +175,9 @@ When reporting a bug:
 
 ## 💬 Community Guidelines
 
-- Be respectful and inclusive — follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+- Be respectful and inclusive - follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 - Use clear, welcoming language in issues and PRs.
-- Ask for help freely — open a discussion or comment on an issue.
+- Ask for help freely - open a discussion or comment on an issue.
 - We actively welcome first-time contributors! Look for `good first issue` labels.
 
 ---

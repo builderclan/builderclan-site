@@ -1,7 +1,19 @@
 "use client";
 
-import { Target, Eye, GraduationCap, Briefcase, BookOpenCheck, Flame, Gamepad2, PackageCheck, Rocket, Sparkles, Users } from "lucide-react";
-import { motion, type Variants } from "framer-motion";
+import { type Variants, motion } from "framer-motion";
+import {
+  BookOpenCheck,
+  Briefcase,
+  Eye,
+  Flame,
+  Gamepad2,
+  GraduationCap,
+  PackageCheck,
+  Rocket,
+  Sparkles,
+  Target,
+  Users,
+} from "lucide-react";
 
 export default function AboutSection() {
   const containerVariants: Variants = {
@@ -31,25 +43,29 @@ export default function AboutSection() {
       icon: GraduationCap,
       badge: "CURIOUS BEGINNERS",
       title: "Learn by Building",
-      description: "Start with real projects, ask questions without judgment, receive mentorship, and build confidence through hands-on experience.",
+      description:
+        "Start with real projects, ask questions without judgment, receive mentorship, and build confidence through hands-on experience.",
     },
     {
       icon: Briefcase,
       badge: "PROFESSIONALS",
       title: "Collaborate & Mentor",
-      description: "Work on ambitious projects, explore new technologies, share industry experience, and help shape the next generation of builders.",
+      description:
+        "Work on ambitious projects, explore new technologies, share industry experience, and help shape the next generation of builders.",
     },
     {
       icon: BookOpenCheck,
       badge: "RESEARCHERS & EDUCATORS",
       title: "Share Knowledge",
-      description: "Advance hardware, software, AI, and research while mentoring curious minds and transforming ideas into real-world impact.",
+      description:
+        "Advance hardware, software, AI, and research while mentoring curious minds and transforming ideas into real-world impact.",
     },
     {
       icon: Flame,
       badge: "LIFELONG LEARNERS",
       title: "Keep Building",
-      description: "You don't need a title to belong here—only curiosity and the desire to keep learning and building.",
+      description:
+        "You don't need a title to belong here, only curiosity and the desire to keep learning and building.",
     },
   ];
 
@@ -58,19 +74,22 @@ export default function AboutSection() {
       icon: Gamepad2,
       subtitle: "START HERE",
       title: "Side Projects",
-      description: "Experiment, explore new technologies, and learn by building things that genuinely interest you.",
+      description:
+        "Experiment, explore new technologies, and learn by building things that genuinely interest you.",
     },
     {
       icon: PackageCheck,
       subtitle: "BUILD TOGETHER",
       title: "Open Source",
-      description: "Contribute to meaningful software and hardware projects, collaborate with other builders, and create technology anyone can use.",
+      description:
+        "Contribute to meaningful software and hardware projects, collaborate with other builders, and create technology anyone can use.",
     },
     {
       icon: Rocket,
       subtitle: "MAKE AN IMPACT",
       title: "Products & Startups",
-      description: "Turn ideas into products, validate them with the community, find collaborators, and launch real ventures.",
+      description:
+        "Turn ideas into products, validate them with the community, find collaborators, and launch real ventures.",
     },
   ];
 
@@ -80,7 +99,6 @@ export default function AboutSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-96 bg-gradient-to-tr from-[#caff33]/10 via-transparent to-transparent pointer-events-none blur-3xl opacity-40" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        
         {/* Section Header */}
         <motion.div
           className="text-center max-w-3xl mx-auto mb-24"
@@ -100,7 +118,11 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
-            Great technology doesn&apos;t begin with code—it begins with curious people willing to learn, build, and share. BuilderClan exists to bring those people together, creating an environment where ideas become projects, projects become products, and builders grow together.
+            Great technology doesn&apos;t begin with code; it begins with
+            curious people willing to learn, build, and share. BuilderClan
+            exists to bring those people together, creating an environment where
+            ideas become projects, projects become products, and builders grow
+            together.
           </p>
         </motion.div>
 
@@ -125,13 +147,16 @@ export default function AboutSection() {
                 <Target className="w-7 h-7" />
               </div>
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#caff33]">PURPOSE</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#caff33]">
+                  PURPOSE
+                </span>
                 <h3 className="text-2xl font-bold text-white">Our Mission</h3>
               </div>
             </div>
 
             <p className="text-[#d4d4d8] text-base leading-relaxed">
-              Empower builders of all backgrounds to learn, collaborate, and build meaningful technology together.
+              Empower builders of all backgrounds to learn, collaborate, and
+              build meaningful technology together.
             </p>
           </motion.div>
 
@@ -148,7 +173,9 @@ export default function AboutSection() {
                 <Eye className="w-7 h-7" />
               </div>
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#caff33]">FUTURE</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#caff33]">
+                  FUTURE
+                </span>
                 <h3 className="text-2xl font-bold text-white">Our Vision</h3>
               </div>
             </div>
@@ -167,10 +194,13 @@ export default function AboutSection() {
               <span>Everyone Starts Somewhere</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
-              There&apos;s a Place for <span className="text-[#caff33]">Every Builder.</span>
+              There&apos;s a Place for{" "}
+              <span className="text-[#caff33]">Every Builder.</span>
             </h3>
             <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
-              Whether you&apos;re taking your first steps or mentoring the next generation, BuilderClan grows with you. Everyone has something to learn, something to build, and something to share.
+              Whether you&apos;re taking your first steps or mentoring the next
+              generation, BuilderClan grows with you. Everyone has something to
+              learn, something to build, and something to share.
             </p>
           </div>
 
@@ -181,9 +211,9 @@ export default function AboutSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            {audience.map((item, idx) => (
+            {audience.map((item) => (
               <motion.div
-                key={idx}
+                key={item.title}
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
                 className="bg-[#1c1c1c] border border-[#262626] hover:border-[#caff33]/50 p-6 rounded-2xl transition-all shadow-md flex flex-col justify-between h-full w-full"
@@ -197,7 +227,9 @@ export default function AboutSection() {
                   <span className="inline-block text-[11px] font-semibold text-[#caff33] uppercase tracking-wider mb-1">
                     {item.badge}
                   </span>
-                  <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+                  <h4 className="text-lg font-bold text-white mb-2">
+                    {item.title}
+                  </h4>
                   <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">
                     {item.description}
                   </p>
@@ -218,7 +250,8 @@ export default function AboutSection() {
               Build What <span className="text-[#caff33]">Matters.</span>
             </h3>
             <p className="text-sm sm:text-base text-[#a1a1aa] leading-relaxed max-w-2xl mx-auto">
-              From your first side project to open source, research, products, and startups, BuilderClan is where ideas become reality.
+              From your first side project to open source, research, products,
+              and startups, BuilderClan is where ideas become reality.
             </p>
           </div>
 
@@ -229,9 +262,9 @@ export default function AboutSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            {buildSpectrum.map((item, idx) => (
+            {buildSpectrum.map((item) => (
               <motion.div
-                key={idx}
+                key={item.title}
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
                 className="bg-[#1c1c1c] border border-[#262626] hover:border-[#caff33]/50 p-6 rounded-2xl transition-all shadow-lg flex flex-col justify-between h-full w-full"
@@ -240,8 +273,12 @@ export default function AboutSection() {
                   <div className="p-3.5 w-fit rounded-xl bg-[#222222] text-[#caff33] mb-4">
                     <item.icon className="w-5 h-5" />
                   </div>
-                  <span className="text-[11px] font-semibold text-[#caff33] uppercase tracking-wider block mb-1">{item.subtitle}</span>
-                  <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
+                  <span className="text-[11px] font-semibold text-[#caff33] uppercase tracking-wider block mb-1">
+                    {item.subtitle}
+                  </span>
+                  <h4 className="text-lg font-bold text-white mb-2">
+                    {item.title}
+                  </h4>
                   <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">
                     {item.description}
                   </p>
@@ -250,7 +287,6 @@ export default function AboutSection() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );

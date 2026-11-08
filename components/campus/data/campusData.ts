@@ -1,18 +1,18 @@
 import {
+  Award,
+  BookOpen,
+  Calendar,
+  Compass,
   Cpu,
   FolderGit2,
-  Calendar,
-  Award,
-  Lightbulb,
-  Rocket,
-  Compass,
-  Users,
-  Layers,
-  GraduationCap,
-  BookOpen,
-  School,
   Globe,
-  LucideIcon,
+  GraduationCap,
+  Layers,
+  Lightbulb,
+  type LucideIcon,
+  Rocket,
+  School,
+  Users,
 } from "lucide-react";
 
 export interface CampusChapter {
@@ -60,7 +60,13 @@ export const CAMPUS_CHAPTERS: CampusChapter[] = [
     members: 50,
     status: "Active Chapter",
     isFounding: true,
-    tags: ["Hardware & IoT", "Software & Web", "Open Source", "Robotics", "Learning Together"],
+    tags: [
+      "Hardware & IoT",
+      "Software & Web",
+      "Open Source",
+      "Robotics",
+      "Learning Together",
+    ],
   },
 ];
 
