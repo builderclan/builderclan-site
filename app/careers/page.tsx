@@ -1,9 +1,16 @@
+import BackToTop from "@components/BackToTop";
+import Footer from "@components/Footer";
+import Header from "@components/Header";
+import {
+  ArrowUpRight,
+  Briefcase,
+  Code2,
+  Mail,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import BackToTop from "@components/BackToTop";
-import { Sparkles, Briefcase, Mail, ArrowUpRight, Users, Code2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Careers",
@@ -17,12 +24,20 @@ export const metadata: Metadata = {
     description:
       "Explore career opportunities and open community roles at BuilderClan. Connect with 500+ global builders.",
     url: "https://builderclan.org/careers",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "BuilderClan Careers" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "BuilderClan Careers",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Careers | BuilderClan",
-    description: "Join BuilderClan, a global community of hardware and software builders.",
+    description:
+      "Join BuilderClan, a global community of hardware and software builders.",
     images: ["/og-image.png"],
   },
 };
@@ -39,7 +54,6 @@ export default function Careers() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-gradient-to-tr from-[#caff33]/10 via-transparent to-transparent pointer-events-none blur-3xl opacity-60" />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-5xl">
-          
           {/* Header Section */}
           <div className="text-center max-w-3xl mx-auto mb-16 pt-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1c1c1c] border border-[#262626] text-xs font-medium text-[#caff33] mb-6 shadow-sm">
@@ -50,14 +64,17 @@ export default function Careers() {
               Build the Future <span className="text-[#caff33]">Together</span>
             </h1>
             <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
-              We are an open tech community for professionals, students, teachers, researchers, beginners, and tech lovers. Join us to build anything from fun side projects to open-source products and startups.
+              We are an open tech community for professionals, students,
+              teachers, researchers, beginners, and tech lovers. Join us to
+              build anything from fun side projects to open-source products and
+              startups.
             </p>
           </div>
 
           {/* No Open Positions Banner */}
           <div className="bg-[#1c1c1c]/90 border border-[#262626] rounded-3xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden mb-12">
             <div className="absolute top-0 right-0 w-40 h-40 bg-[#caff33]/5 rounded-bl-full pointer-events-none" />
-            
+
             <div className="w-16 h-16 rounded-2xl bg-[#222222] border border-[#262626] flex items-center justify-center mx-auto mb-6 text-[#caff33]">
               <Briefcase className="w-8 h-8" />
             </div>
@@ -65,9 +82,12 @@ export default function Careers() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
               No Open Full-Time Positions Currently
             </h2>
-            
+
             <p className="text-base text-[#a1a1aa] max-w-xl mx-auto mb-8 leading-relaxed">
-              We don&apos;t have active full-time job openings at this moment. However, our community is constantly opening hardware/software project lead, peer mentorship, and BuilderClan On Campus (BCC) leadership roles!
+              We don&apos;t have active full-time job openings at this moment.
+              However, our community is constantly opening hardware/software
+              project lead, peer mentorship, and BuilderClan On Campus (BCC)
+              leadership roles!
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -98,9 +118,13 @@ export default function Careers() {
                 <div className="p-3 rounded-xl bg-[#222222] text-[#caff33] w-fit mb-4">
                   <Code2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Project Leads</h3>
+                <h3 className="text-lg font-bold text-white mb-2">
+                  Project Leads
+                </h3>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed mb-4">
-                  Have an idea for a fun side hack, open-source product, or startup? Lead a team of community builders and turn ideas into reality.
+                  Have an idea for a fun side hack, open-source product, or
+                  startup? Lead a team of community builders and turn ideas into
+                  reality.
                 </p>
               </div>
               <a
@@ -119,9 +143,13 @@ export default function Careers() {
                 <div className="p-3 rounded-xl bg-[#222222] text-[#caff33] w-fit mb-4">
                   <Users className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Peer Mentors</h3>
+                <h3 className="text-lg font-bold text-white mb-2">
+                  Peer Mentors
+                </h3>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed mb-4">
-                  Support beginners, students, and curious minds by reviewing code & schematics, answering questions, and hosting build sessions.
+                  Support beginners, students, and curious minds by reviewing
+                  code & schematics, answering questions, and hosting build
+                  sessions.
                 </p>
               </div>
               <a
@@ -138,9 +166,13 @@ export default function Careers() {
                 <div className="p-3 rounded-xl bg-[#222222] text-[#caff33] w-fit mb-4">
                   <Sparkles className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">BCC Campus Leads</h3>
+                <h3 className="text-lg font-bold text-white mb-2">
+                  BCC Campus Leads
+                </h3>
                 <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed mb-4">
-                  Build a campus ecosystem where students and teachers work side by side to learn, experiment, and build tech projects together.
+                  Build a campus ecosystem where students and teachers work side
+                  by side to learn, experiment, and build tech projects
+                  together.
                 </p>
               </div>
               <Link
@@ -152,7 +184,6 @@ export default function Careers() {
               </Link>
             </div>
           </div>
-
         </div>
       </main>
 

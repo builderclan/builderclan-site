@@ -1,30 +1,35 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useForm, useWatch, UseFormRegister, FieldError } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Sparkles,
-  Tag,
-  ArrowRight,
-  GraduationCap,
-  Briefcase,
-  User,
-  UserCheck,
-  ArrowLeft,
-  Mail,
-  Phone,
-  Calendar,
-  LucideIcon,
-} from "lucide-react";
 import styles from "@/app/signup/signup.module.css";
 import Success from "@/components/signup/Success";
 import { Label } from "@/components/ui/label";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Briefcase,
+  Calendar,
+  GraduationCap,
+  type LucideIcon,
+  Mail,
+  Phone,
+  Sparkles,
+  Tag,
+  User,
+  UserCheck,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import {
+  type FieldError,
+  type UseFormRegister,
+  useForm,
+  useWatch,
+} from "react-hook-form";
+import { z } from "zod";
 
 const API_ENDPOINT = process.env.NEXT_PUBLIC_API_URL || "";
 
@@ -64,11 +69,11 @@ const signupSchema = z.object({
     .refine(
       (date) => {
         const parsed = new Date(date);
-        return !isNaN(parsed.getTime()) && parsed < new Date();
+        return !Number.isNaN(parsed.getTime()) && parsed < new Date();
       },
       {
         message: VALIDATION_MESSAGES.dob,
-      }
+      },
     ),
   gender: z.enum(["male", "female"], {
     message: VALIDATION_MESSAGES.gender,
@@ -87,11 +92,15 @@ const signupSchema = z.object({
 type SignupFormData = z.infer<typeof signupSchema>;
 
 const ERROR_MESSAGES = {
-  default: "We're having trouble processing your registration. Please try again.",
+  default:
+    "We're having trouble processing your registration. Please try again.",
   badRequest: "Please check your information and try again.",
-  conflict: "An account with this email already exists. Please use a different email.",
-  validation: "Some of your information is invalid. Please review highlighted fields.",
-  serverError: "Our servers are temporarily unavailable. Please try again in a few minutes.",
+  conflict:
+    "An account with this email already exists. Please use a different email.",
+  validation:
+    "Some of your information is invalid. Please review highlighted fields.",
+  serverError:
+    "Our servers are temporarily unavailable. Please try again in a few minutes.",
   networkError: "Please check your internet connection and try again.",
 };
 
@@ -134,10 +143,21 @@ interface FormFieldProps {
   error?: FieldError;
 }
 
-function FormField({ id, type = "text", label, placeholder, icon: Icon, register, error }: FormFieldProps) {
+function FormField({
+  id,
+  type = "text",
+  label,
+  placeholder,
+  icon: Icon,
+  register,
+  error,
+}: FormFieldProps) {
   return (
     <div className={styles.formGroup}>
-      <Label htmlFor={id} className="text-xs font-semibold text-[#d4d4d8] mb-1.5 flex items-center gap-1.5">
+      <Label
+        htmlFor={id}
+        className="text-xs font-semibold text-[#d4d4d8] mb-1.5 flex items-center gap-1.5"
+      >
         {label}
       </Label>
       <div className="relative">
@@ -162,7 +182,9 @@ function FormField({ id, type = "text", label, placeholder, icon: Icon, register
           {...register(id)}
         />
       </div>
-      {error && <p className="text-[11px] text-[#f87171] mt-1">{error.message}</p>}
+      {error && (
+        <p className="text-[11px] text-[#f87171] mt-1">{error.message}</p>
+      )}
     </div>
   );
 }
@@ -176,7 +198,8 @@ function getErrorMessage(status?: number): string {
   if (status === HTTP_STATUS.BAD_REQUEST) return ERROR_MESSAGES.badRequest;
   if (status === HTTP_STATUS.CONFLICT) return ERROR_MESSAGES.conflict;
   if (status === HTTP_STATUS.VALIDATION_ERROR) return ERROR_MESSAGES.validation;
-  if (status && status >= HTTP_STATUS.SERVER_ERROR) return ERROR_MESSAGES.serverError;
+  if (status && status >= HTTP_STATUS.SERVER_ERROR)
+    return ERROR_MESSAGES.serverError;
   return ERROR_MESSAGES.default;
 }
 
@@ -184,7 +207,9 @@ export interface RegistrationFormProps {
   initialReferralCode?: string;
 }
 
-export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormProps) {
+export function RegistrationForm({
+  initialReferralCode = "",
+}: RegistrationFormProps) {
   const [formState, setFormState] = useState({
     isSubmitting: false,
     submitError: "",
@@ -325,7 +350,8 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
 
                 <h1 className={styles.title}>Create Your Account</h1>
                 <p className={styles.subtitle}>
-                  Join our global tech community &amp; collaborate on open source, products, and startups
+                  Join our global tech community &amp; collaborate on open
+                  source, products, and startups
                 </p>
               </div>
 
@@ -394,7 +420,9 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
                   />
 
                   <div className={styles.formGroup}>
-                    <Label className="text-xs font-semibold text-[#d4d4d8] mb-1.5 block">Gender</Label>
+                    <Label className="text-xs font-semibold text-[#d4d4d8] mb-1.5 block">
+                      Gender
+                    </Label>
                     <div className="grid grid-cols-2 gap-2">
                       {GENDER_OPTIONS.map((g) => {
                         const isSelected = selectedGender === g.id;
@@ -402,7 +430,11 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
                           <button
                             key={g.id}
                             type="button"
-                            onClick={() => setValue("gender", g.id as any, { shouldValidate: true })}
+                            onClick={() =>
+                              setValue("gender", g.id as "male" | "female", {
+                                shouldValidate: true,
+                              })
+                            }
                             className={`py-2.5 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 transition-all ${
                               isSelected
                                 ? "bg-[#caff33] text-[#1c1c1c] border-[#caff33] shadow-sm"
@@ -415,13 +447,19 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
                         );
                       })}
                     </div>
-                    {errors.gender && <p className="text-[11px] text-[#f87171] mt-1">{errors.gender.message}</p>}
+                    {errors.gender && (
+                      <p className="text-[11px] text-[#f87171] mt-1">
+                        {errors.gender.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 {/* Role Selection Cards (Student & Professional) */}
                 <div className={styles.formGroup}>
-                  <Label className="text-xs font-semibold text-[#d4d4d8] mb-1.5 block">Select Your Role</Label>
+                  <Label className="text-xs font-semibold text-[#d4d4d8] mb-1.5 block">
+                    Select Your Role
+                  </Label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {ROLE_OPTIONS.map((role) => {
                       const isSelected = selectedRole === role.id;
@@ -430,7 +468,13 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
                         <button
                           key={role.id}
                           type="button"
-                          onClick={() => setValue("role", role.id as any, { shouldValidate: true })}
+                          onClick={() =>
+                            setValue(
+                              "role",
+                              role.id as "student" | "professional",
+                              { shouldValidate: true },
+                            )
+                          }
                           className={`p-4 rounded-xl border text-left flex flex-col justify-between transition-all ${
                             isSelected
                               ? "bg-[#1c1c1c] border-[#caff33] shadow-[0_0_12px_rgba(202,255,51,0.2)]"
@@ -464,12 +508,17 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
                       );
                     })}
                   </div>
-                  {errors.role && <p className="text-[11px] text-[#f87171] mt-1">{errors.role.message}</p>}
+                  {errors.role && (
+                    <p className="text-[11px] text-[#f87171] mt-1">
+                      {errors.role.message}
+                    </p>
+                  )}
                 </div>
 
                 {formState.submitError && (
                   <div className={styles.errorAlert}>
-                    <strong>Registration Failed:</strong> {formState.submitError}
+                    <strong>Registration Failed:</strong>{" "}
+                    {formState.submitError}
                   </div>
                 )}
 
@@ -484,7 +533,9 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
                       ? "Creating your account..."
                       : "Join BuilderClan Community"}
                   </span>
-                  {!formState.isSubmitting && <ArrowRight className="w-4 h-4" />}
+                  {!formState.isSubmitting && (
+                    <ArrowRight className="w-4 h-4" />
+                  )}
                 </button>
               </form>
             </div>

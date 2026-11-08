@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
 import CampusContent from "@/components/campus/CampusContent";
+import type { Metadata } from "next";
 
 const siteUrl = "https://builderclan.org";
-const pageTitle = "BuilderClan on Campus (BCC) | Building the Next Generation of Builders";
+const pageTitle =
+  "BuilderClan on Campus (BCC) | Building the Next Generation of Builders";
 const pageDescription =
   "BuilderClan on Campus (BCC) brings students and educators together to learn, collaborate, build hardware and software projects, contribute to open source, conduct research, and turn ideas into products and startups.";
 

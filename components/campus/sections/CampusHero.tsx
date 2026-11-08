@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import {
-  Sparkles,
-  Calendar,
   ArrowUpRight,
-  Users,
+  Calendar,
   Cpu,
   FolderGit2,
-  Rocket,
   GraduationCap,
+  Rocket,
+  Sparkles,
+  Users,
 } from "lucide-react";
 
 export default function CampusHero() {
@@ -57,7 +57,10 @@ export default function CampusHero() {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed mb-8 max-w-xl">
-              BuilderClan on Campus empowers students and educators to build real hardware, software, AI, robotics, embedded systems, and open-source projects while developing leadership, collaboration, research, and startup experience beyond the classroom.
+              BuilderClan on Campus empowers students and educators to build
+              real hardware, software, AI, robotics, embedded systems, and
+              open-source projects while developing leadership, collaboration,
+              research, and startup experience beyond the classroom.
             </p>
 
             {/* CTA Buttons */}
@@ -100,7 +103,9 @@ export default function CampusHero() {
                     className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2 rounded-xl bg-[#1c1c1c]/90 border border-[#262626] text-[11px] sm:text-xs font-semibold text-[#d4d4d8] shadow-sm justify-center sm:justify-start"
                   >
                     <Icon className="w-3.5 h-3.5 text-[#caff33] shrink-0" />
-                    <span className="truncate sm:whitespace-nowrap">{pill.label}</span>
+                    <span className="truncate sm:whitespace-nowrap">
+                      {pill.label}
+                    </span>
                   </div>
                 );
               })}
@@ -125,9 +130,21 @@ export default function CampusHero() {
               transition={{
                 opacity: { duration: 0.6 },
                 scale: { duration: 0.8 },
-                y: { duration: 5.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-                rotateY: { duration: 7, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
-                rotateX: { duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                y: {
+                  duration: 5.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                },
+                rotateY: {
+                  duration: 7,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                },
+                rotateX: {
+                  duration: 6,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{ scale: 1.06, rotateY: 0, rotateX: 0 }}
               className="relative z-20 p-8 rounded-full bg-gradient-to-b from-[#1c1c1c] via-[#181818] to-[#141414] border-2 border-[#caff33]/40 hover:border-[#caff33] shadow-[-20px_20px_60px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(202,255,51,0.3)] transition-all cursor-pointer flex items-center justify-center"
@@ -147,7 +164,11 @@ export default function CampusHero() {
               }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.3 },
-                y: { duration: 4.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                y: {
+                  duration: 4.8,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                },
               }}
               whileHover={{ scale: 1.05 }}
             >
@@ -155,8 +176,12 @@ export default function CampusHero() {
                 <Cpu className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#caff33]" />
               </div>
               <div className="text-left">
-                <div className="text-[11px] sm:text-xs font-extrabold text-white">Hardware & Software</div>
-                <div className="text-[10px] sm:text-[11px] text-[#a1a1aa]">IoT, AI & Labs</div>
+                <div className="text-[11px] sm:text-xs font-extrabold text-white">
+                  Hardware & Software
+                </div>
+                <div className="text-[10px] sm:text-[11px] text-[#a1a1aa]">
+                  IoT, AI & Labs
+                </div>
               </div>
             </motion.div>
 
@@ -170,7 +195,12 @@ export default function CampusHero() {
               }}
               transition={{
                 opacity: { duration: 0.6, delay: 0.5 },
-                y: { duration: 5.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.4 },
+                y: {
+                  duration: 5.2,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                  delay: 0.4,
+                },
               }}
               whileHover={{ scale: 1.05 }}
             >
@@ -178,11 +208,13 @@ export default function CampusHero() {
                 <Calendar className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#caff33]" />
               </div>
               <div className="text-left">
-                <div className="text-[11px] sm:text-xs font-extrabold text-white">Annual Application</div>
+                <div className="text-[11px] sm:text-xs font-extrabold text-white">
+                  Annual Application
+                </div>
                 <div className="text-[10px] sm:text-[11px] text-[#caff33] font-semibold flex items-center gap-1">
                   <span className="relative flex h-1.5 w-1.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#caff33] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#caff33]"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#caff33] opacity-75" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#caff33]" />
                   </span>
                   1x / Academic Year
                 </div>
@@ -211,7 +243,9 @@ export default function CampusHero() {
               <div className="text-xl sm:text-2xl font-extrabold text-[#caff33] mb-1">
                 {stat.val}
               </div>
-              <div className="text-xs font-medium text-[#a1a1aa]">{stat.label}</div>
+              <div className="text-xs font-medium text-[#a1a1aa]">
+                {stat.label}
+              </div>
             </div>
           ))}
         </motion.div>

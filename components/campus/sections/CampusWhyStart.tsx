@@ -6,7 +6,10 @@ import { WHY_START_CARDS } from "../data/campusData";
 
 export default function CampusWhyStart() {
   return (
-    <section className="py-24 bg-[#141414] relative overflow-hidden" aria-label="Why Start a Chapter">
+    <section
+      className="py-24 bg-[#141414] relative overflow-hidden"
+      aria-label="Why Start a Chapter"
+    >
       {/* Subtle Ambient Radial Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-80 bg-gradient-to-r from-[#caff33]/10 via-[#caff33]/5 to-transparent blur-3xl pointer-events-none opacity-50" />
 
@@ -17,10 +20,13 @@ export default function CampusWhyStart() {
             <span>LEARN. BUILD. LEAD.</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
-            Why Start BuilderClan on <span className="text-[#caff33]">Your Campus?</span>
+            Why Start BuilderClan on{" "}
+            <span className="text-[#caff33]">Your Campus?</span>
           </h2>
           <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed max-w-3xl mx-auto">
-            BuilderClan on Campus empowers students and educators to learn by building, collaborate on meaningful projects, contribute to open source, and grow into the next generation of technical leaders.
+            BuilderClan on Campus empowers students and educators to learn by
+            building, collaborate on meaningful projects, contribute to open
+            source, and grow into the next generation of technical leaders.
           </p>
         </div>
 
@@ -42,8 +48,12 @@ export default function CampusWhyStart() {
                   <div className="w-12 h-12 rounded-2xl bg-[#caff33]/10 border border-[#caff33]/25 flex items-center justify-center text-[#caff33] mb-6 shadow-sm group-hover:scale-105 transition-transform duration-250 ease-out">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 leading-snug tracking-tight">{card.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">{card.desc}</p>
+                  <h3 className="text-lg font-bold text-white mb-3 leading-snug tracking-tight">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed">
+                    {card.desc}
+                  </p>
                 </div>
               </motion.div>
             );
@@ -53,7 +63,8 @@ export default function CampusWhyStart() {
         {/* Subtle Muted Section Transition */}
         <div className="mt-20 text-center">
           <p className="text-xs sm:text-sm text-[#71717a] font-medium max-w-lg mx-auto leading-relaxed opacity-90">
-            Every BuilderClan chapter is unique, but every chapter shares one mission: building the next generation of builders.
+            Every BuilderClan chapter is unique, but every chapter shares one
+            mission: building the next generation of builders.
           </p>
         </div>
       </div>

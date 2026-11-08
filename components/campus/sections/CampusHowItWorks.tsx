@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Compass, ArrowRight } from "lucide-react";
+import { ArrowRight, Compass } from "lucide-react";
 import { HOW_IT_WORKS_STEPS } from "../data/campusData";
 
 export default function CampusHowItWorks() {
   return (
-    <section className="py-24 relative overflow-hidden" aria-label="How It Works">
+    <section
+      className="py-24 relative overflow-hidden"
+      aria-label="How It Works"
+    >
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1c1c1c] border border-[#262626] text-xs font-semibold text-[#caff33] mb-4 shadow-sm">
@@ -14,10 +17,12 @@ export default function CampusHowItWorks() {
             <span>BUILDER JOURNEY PATHWAY</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-            How BuilderClan on Campus <span className="text-[#caff33]">Works</span>
+            How BuilderClan on Campus{" "}
+            <span className="text-[#caff33]">Works</span>
           </h2>
           <p className="text-sm sm:text-base text-[#a1a1aa] max-w-lg mx-auto leading-relaxed">
-            A structured step-by-step pathway for leaders bringing hands-on tech, hardware labs, open source, and startups to their university.
+            A structured step-by-step pathway for leaders bringing hands-on
+            tech, hardware labs, open source, and startups to their university.
           </p>
         </div>
 

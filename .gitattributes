@@ -1,0 +1,2 @@
+# Normalize line endings to LF across all operating systems
+* text=auto eol=lf

@@ -1,18 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Search,
+  ArrowUpRight,
+  Building2,
+  ExternalLink,
+  Globe,
   GraduationCap,
   MapPin,
-  Users,
-  Globe,
-  ExternalLink,
-  Building2,
-  ArrowUpRight,
   RotateCcw,
+  Search,
+  Users,
 } from "lucide-react";
+import { useState } from "react";
 import { CAMPUS_CHAPTERS } from "../data/campusData";
 
 export default function CampusDirectory() {
@@ -23,18 +23,23 @@ export default function CampusDirectory() {
       c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       c.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
       c.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      c.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()))
+      c.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase())),
   );
 
   return (
-    <section className="py-20 relative" id="directory" aria-label="Campus Directory">
+    <section
+      className="py-20 relative"
+      id="directory"
+      aria-label="Campus Directory"
+    >
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
             Our <span className="text-[#caff33]">Campus Chapters</span>
           </h2>
           <p className="text-sm sm:text-base text-[#a1a1aa] max-w-xl mx-auto">
-            Explore our founding university chapter or apply to bring BuilderClan to your college.
+            Explore our founding university chapter or apply to bring
+            BuilderClan to your college.
           </p>
         </div>
 
@@ -75,8 +80,8 @@ export default function CampusDirectory() {
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#141414] border border-[#262626] text-xs font-semibold text-[#caff33]">
                       <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#caff33] opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#caff33]"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#caff33] opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#caff33]" />
                       </span>
                       <span>{chapter.status}</span>
                     </div>
@@ -162,9 +167,13 @@ export default function CampusDirectory() {
                 <div className="w-14 h-14 rounded-2xl bg-[#1c1c1c] border border-[#262626] group-hover:border-[#caff33]/50 flex items-center justify-center text-[#caff33] mb-5 group-hover:scale-110 transition-transform shadow-lg">
                   <Building2 className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-extrabold text-white mb-2.5">Your University Here</h3>
+                <h3 className="text-xl font-extrabold text-white mb-2.5">
+                  Your University Here
+                </h3>
                 <p className="text-xs text-[#a1a1aa] max-w-xs mx-auto leading-relaxed mb-6">
-                  Bring BuilderClan hardware labs, robotics workshops, and open-source projects to your campus. Applications open once per academic year.
+                  Bring BuilderClan hardware labs, robotics workshops, and
+                  open-source projects to your campus. Applications open once
+                  per academic year.
                 </p>
                 <a
                   href="https://forms.gle/tBUDeHSj75sW7et69"
@@ -194,7 +203,11 @@ export default function CampusDirectory() {
               </h3>
 
               <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed max-w-sm mx-auto mb-6">
-                No active chapter matches <span className="text-[#caff33] font-medium">&quot;{searchQuery}&quot;</span>. Be the pioneer to bring BuilderClan to your campus!
+                No active chapter matches{" "}
+                <span className="text-[#caff33] font-medium">
+                  &quot;{searchQuery}&quot;
+                </span>
+                . Be the pioneer to bring BuilderClan to your campus!
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
@@ -209,6 +222,7 @@ export default function CampusDirectory() {
                 </a>
 
                 <button
+                  type="button"
                   onClick={() => setSearchQuery("")}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-[#141414] hover:bg-[#222222] border border-[#262626] text-xs font-medium text-[#a1a1aa] hover:text-white transition-all cursor-pointer"
                 >

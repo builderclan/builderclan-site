@@ -1,7 +1,14 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import { FolderGit2, Rocket, BookOpen, Users, Sparkles, ArrowUpRight } from "lucide-react";
+import { type Variants, motion } from "framer-motion";
+import {
+  ArrowUpRight,
+  BookOpen,
+  FolderGit2,
+  Rocket,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function OpportunitySection() {
@@ -63,12 +70,14 @@ export default function OpportunitySection() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-[#141414]" id="opportunity">
+    <section
+      className="py-24 relative overflow-hidden bg-[#141414]"
+      id="opportunity"
+    >
       {/* Subtle Radial Green Glow Behind Entire Section */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-96 sm:h-[450px] bg-gradient-to-tr from-[#caff33]/10 via-[#caff33]/5 to-transparent pointer-events-none blur-3xl opacity-50" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        
         {/* Section Header */}
         <motion.div
           className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
@@ -88,7 +97,8 @@ export default function OpportunitySection() {
           </h2>
 
           <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
-            BuilderClan gives you the people, guidance, and environment to turn curiosity into open source, products, research, and startups.
+            BuilderClan gives you the people, guidance, and environment to turn
+            curiosity into open source, products, research, and startups.
           </p>
         </motion.div>
 
@@ -101,7 +111,12 @@ export default function OpportunitySection() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {opportunities.map((item) => (
-            <motion.div key={item.num} variants={itemVariants} whileHover={{ y: -7 }} className="h-full">
+            <motion.div
+              key={item.num}
+              variants={itemVariants}
+              whileHover={{ y: -7 }}
+              className="h-full"
+            >
               <Link
                 href="#joinclan"
                 className="group relative bg-[#1c1c1c]/90 hover:bg-[#222222] border border-[#262626] hover:border-[#caff33] hover:shadow-[0_0_25px_rgba(202,255,51,0.2)] rounded-3xl px-8 py-10 sm:px-10 sm:py-14 transition-all duration-300 ease-out shadow-xl overflow-hidden flex flex-col justify-between h-full cursor-pointer block"
@@ -156,7 +171,6 @@ export default function OpportunitySection() {
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </motion.div>
-
       </div>
     </section>
   );
