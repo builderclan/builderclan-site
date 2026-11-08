@@ -2,13 +2,13 @@
 
 **A home for people who love to build.**
 
-The official open-source website for the [BuilderClan](https://builder-clan.org) community — a peer-to-peer tech community for hardware and software builders. This repository is built and maintained collaboratively by the community.
+The official open-source website for the [BuilderClan](https://builder-clan.org) community - a peer-to-peer tech community for hardware and software builders. This repository is built and maintained collaboratively by the community.
 
 ---
 
 ## What is BuilderClan?
 
-BuilderClan is a pure-tech, peer-to-peer community where people come together to build projects, learn, experiment, and grow. Whether you work on software, hardware, open-source, or product experiments — there is a place for you here. Beginner-friendly, community-first, and 100% free.
+BuilderClan is a pure-tech, peer-to-peer community where people come together to build projects, learn, experiment, and grow. Whether you work on software, hardware, open-source, or product experiments - there is a place for you here. Beginner-friendly, community-first, and 100% free.
 
 ---
 
@@ -66,7 +66,7 @@ builderclan-site/
 
 | Route | Description |
 |---|---|
-| `/` | Home — hero, about, opportunities, FAQ, contact |
+| `/` | Home - hero, about, opportunities, FAQ, contact |
 | `/campus` | Campus Chapters directory and Campus Lead application |
 | `/careers` | Open roles and volunteer opportunities |
 | `/signup` | Community sign-up flow |
@@ -147,7 +147,7 @@ style(hero): improve heading spacing and typography
 
 ## Contributing
 
-Contributions of all sizes are welcome — from fixing a typo to building a whole new feature.
+Contributions of all sizes are welcome - from fixing a typo to building a whole new feature.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full contribution guide.
 
@@ -157,9 +157,9 @@ Pull requests should target the **`dev`** branch.
 
 ## Community Guidelines
 
-- Be respectful and inclusive — follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+- Be respectful and inclusive - follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 - Ask questions freely by opening a [GitHub Issue](https://github.com/BuilderClan/builderclan-site/issues).
-- First-time contributors are always welcome — look for `good first issue` labels.
+- First-time contributors are always welcome - look for `good first issue` labels.
 
 ---
 

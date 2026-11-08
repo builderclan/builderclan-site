@@ -53,7 +53,7 @@ export default function CampusWhyStart() {
         {/* Subtle Muted Section Transition */}
         <div className="mt-20 text-center">
           <p className="text-xs sm:text-sm text-[#71717a] font-medium max-w-lg mx-auto leading-relaxed opacity-90">
-            Every BuilderClan chapter is unique, but every chapter shares one mission—building the next generation of builders.
+            Every BuilderClan chapter is unique, but every chapter shares one mission: building the next generation of builders.
           </p>
         </div>
       </div>

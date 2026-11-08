@@ -129,8 +129,8 @@ export default function Header() {
           <Image
             src="/LogoShort.png"
             alt="BuilderClan Logo"
-            width={206}
-            height={161}
+            width={450}
+            height={266}
             priority
             className="w-8 h-auto transition-transform group-hover:scale-105"
           />

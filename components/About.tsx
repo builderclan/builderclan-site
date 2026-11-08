@@ -49,7 +49,7 @@ export default function AboutSection() {
       icon: Flame,
       badge: "LIFELONG LEARNERS",
       title: "Keep Building",
-      description: "You don't need a title to belong here—only curiosity and the desire to keep learning and building.",
+      description: "You don't need a title to belong here, only curiosity and the desire to keep learning and building.",
     },
   ];
 
@@ -100,7 +100,7 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed">
-            Great technology doesn&apos;t begin with code—it begins with curious people willing to learn, build, and share. BuilderClan exists to bring those people together, creating an environment where ideas become projects, projects become products, and builders grow together.
+            Great technology doesn&apos;t begin with code; it begins with curious people willing to learn, build, and share. BuilderClan exists to bring those people together, creating an environment where ideas become projects, projects become products, and builders grow together.
           </p>
         </motion.div>
 

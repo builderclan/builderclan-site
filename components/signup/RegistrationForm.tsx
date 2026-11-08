@@ -287,8 +287,8 @@ export function RegistrationForm({ initialReferralCode = "" }: RegistrationFormP
             <Image
               src="/LogoShort.png"
               alt="BuilderClan Logo"
-              width={206}
-              height={161}
+              width={450}
+              height={266}
               className="w-7 h-auto"
             />
             <span className="text-sm font-bold text-white tracking-tight group-hover:text-[#caff33] transition-colors">
