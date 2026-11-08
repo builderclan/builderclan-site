@@ -105,7 +105,7 @@ export default function FaqSection() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>HAVE QUESTIONS?</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
             Frequently Asked <span className="text-[#caff33]">Questions</span>
           </h2>
           <p className="text-base text-[#a1a1aa] max-w-xl mx-auto leading-relaxed">

@@ -48,7 +48,7 @@ export default function CampusHero() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6">
               Building the{" "}
               <span className="text-[#caff33] drop-shadow-[0_0_20px_rgba(202,255,51,0.3)]">
                 Next Generation of Builders.
@@ -71,7 +71,7 @@ export default function CampusHero() {
                 rel="noopener noreferrer"
                 whileHover={{ y: -2, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-extrabold text-sm transition-all duration-250 ease-out shadow-[0_0_20px_rgba(202,255,51,0.3)] hover:shadow-[0_0_30px_rgba(202,255,51,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33]"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-semibold text-sm transition-all duration-250 ease-out shadow-[0_0_20px_rgba(202,255,51,0.3)] hover:shadow-[0_0_30px_rgba(202,255,51,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#caff33]"
                 aria-label="Start BuilderClan at Your Campus Application"
               >
                 <span>Start BuilderClan at Your Campus</span>
