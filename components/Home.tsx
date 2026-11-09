@@ -38,7 +38,7 @@ export default function HomeSection() {
       {/* Ambient Radial Lighting Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-5xl h-96 bg-gradient-to-tr from-[#caff33]/10 via-transparent to-transparent pointer-events-none blur-3xl opacity-60" />
 
-      <div className="container mx-auto px-4 h-full relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 h-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-center h-full">
           {/* Left Text & CTA Content (7 Cols) */}
           <div className="col-span-12 lg:col-span-7 lg:mb-0 mb-12">

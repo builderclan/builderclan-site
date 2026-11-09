@@ -1,6 +1,6 @@
-import BackToTop from "@components/BackToTop";
-import Footer from "@components/Footer";
-import Header from "@components/Header";
+import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import {
   ArrowUpRight,
   Briefcase,
@@ -95,7 +95,7 @@ export default function Careers() {
                 href="https://discord.gg/GFnBvjc5tj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-semibold text-sm transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#caff33] hover:bg-[#bce62e] text-[#1c1c1c] font-semibold text-sm transition-all shadow-[0_0_15px_rgba(202,255,51,0.3)] hover:shadow-[0_0_25px_rgba(202,255,51,0.5)]"
               >
                 <span>Join Community Discord</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ export default function Careers() {
 
               <a
                 href="mailto:main.builderclan@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#222222] hover:bg-[#282828] border border-[#262626] hover:border-[#383838] text-white font-medium text-sm transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#1c1c1c] hover:bg-[#262626] border border-[#262626] hover:border-[#383838] text-white font-medium text-sm transition-all"
               >
                 <Mail className="w-4 h-4 text-[#caff33]" />
                 <span>Send Spontaneous Application</span>

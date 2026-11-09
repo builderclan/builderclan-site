@@ -22,7 +22,7 @@ export default function BackToTop() {
 
   return (
     <Link
-      className="back-to-top fixed bottom-10 right-10 cursor-pointer shadow-lg hover:scale-110 transition-transform"
+      className="p-2.5 flex items-center justify-center bg-[#caff33] rounded-full fixed bottom-10 right-10 cursor-pointer shadow-lg hover:scale-110 transition-transform z-50"
       href="#home"
       aria-label="Back to top"
     >
